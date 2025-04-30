@@ -30,7 +30,17 @@
     </style>
 </head>
 <body>
-<script src="javaas.js"></script>
+    <script>
+        fetch('javaas.js')
+            .then(response => response.text())
+            .then(code => {
+                document.getElementById('js-code').textContent = code;
+            })
+            .catch(error => {
+                console.error('Error loading JavaScript file:', error);
+                document.getElementById('js-code').textContent = 'Failed to load JavaScript file.';
+            });
+    </script>
     <header>
         <h1>Miratried's Good 'ol Website</h1>
     </header>
