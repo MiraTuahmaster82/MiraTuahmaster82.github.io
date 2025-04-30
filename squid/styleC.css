@@ -12,5 +12,13 @@ body {
   4px 9px 0 rgb(162,162,162), 4.5px 10px 0 rgb(152,152,152),
   5px 11px 0 rgb(142,142,142), 5.5px 12px 0 rgb(132,132,132),
   0 20px 30px rgba(0, 0, 0, 0.5);
-  font-size: 64px;
+  font-size: 80px;
+  white-space: nowrap;
+  display: inline-block; 
+  vertical-align: middle;
+}
+.titlecontainer {
+  white-space: nowrap; 
+  overflow: hidden; 
+  text-align: center;
 }
