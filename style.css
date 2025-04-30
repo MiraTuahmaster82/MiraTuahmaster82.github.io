@@ -55,3 +55,17 @@ main {
   border-radius: 5px;
   background-color: #909090;
 }
+
+.musics {
+  border: 1px solid #000000;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 5px;
+  background-color: #909090;
+  display: flex;
+  justify-content: center;
+  vertical-align: center;
+  width: fit-content;
+  height: fit-content;
+
+}
