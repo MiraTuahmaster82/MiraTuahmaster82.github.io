@@ -69,3 +69,15 @@ main {
   height: fit-content;
 
 }
+img {
+  transition: .2s;
+  max-height: 300px; 
+  width: auto; 
+  border: 5px solid #000000;
+}
+img:hover {
+  transform: scale(1.5);
+  border: 0;
+  background-color: #b0b0b0;
+  
+}
