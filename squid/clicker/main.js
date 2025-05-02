@@ -12,9 +12,39 @@ const hoverText = new Map([
 ]);
 const upgradeElements = new Map([])
 
+if (localStorage.upgradeValues) {
+  const upgradeValues = JSON.parse(localStorage.getItem("upgradeValues"))
+} else {
+  localStorage.setItem("upgradeValues", JSON.stringify({
+    "upgradeClickValue": {
+      "operation": "+1",
+      "level": 0,
+      "cost": 10,
+      "costScale": 1.5,
+    },
+  }));
+}
+
 const tooltip = document.createElement("div");
 tooltip.id = "tooltip";
 document.body.appendChild(tooltip);
+
+function applyOperation(finisher, op, start, x, y, z) {
+  let formatted = op.replace(/\^/g, "**").replace(/x/g, `${x}`).replace(/y/g, `${y}`).replace(/z/g, `${z}`);
+  formatted = `${formatted}`
+
+  try {
+    console.log(start + finisher + `(${formatted})`)
+    const result = eval(start + finisher + `(${formatted})`);
+    console.log(result)
+    return result;
+  } catch (e) {
+    console.error("Error applying operation:", e);
+    return null;
+  }
+} 
+
+applyOperation("+","x^y^z", 5, 5, 2, 3);
 
 for (let i=0; i < upgradeIDs.length; i++) {
   id = upgradeIDs[i];
@@ -36,6 +66,13 @@ for (let i=0; i < upgradeIDs.length; i++) {
     element.addEventListener("mousemove", (e) => {
       tooltip.style.left = `${e.pageX+10}px`;
       tooltip.style.top = `${e.pageY+10}px`;
+    })
+    element.addEventListener("click", (e) => {
+      if (localStorage.Score >= 10) {
+
+      } else {
+        console.log("out of money")
+      }
     })
   }
 }
