@@ -1,8 +1,8 @@
-// Make sure everything is loaded before attempting anything
+
+
 document.addEventListener("DOMContentLoaded", (event) => {
   document.getElementById("score").innerHTML = 'SCORE: ' + localStorage.Score;
-
-
+});
   // Setting elements of the main elements
   const clicker = document.getElementById('mainclicker');
   const clapper = document.getElementById('clapper'); // Enable along side the clapper code if you want it back
@@ -162,4 +162,3 @@ document.addEventListener("DOMContentLoaded", (event) => {
     }
     scoreCounter.innerHTML = 'SCORE: ' + localStorage.Score; // Update the score counter
   }
-});
