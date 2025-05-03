@@ -10,19 +10,25 @@
 </head>
 
 <body>
-    <header>
-        <h1 class='title'>CLICKER // GAME</h1>
-    </header>
+    <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h1 class='title' style="margin: 0;">CLICKER // GAME</h1>
+        <p id='score' style="text-align: center; font-size: 4em; margin: 10px;"></p>
+    </div>
     <button id='mainclicker' onclick='clicked()' class='clicker'>
         A
     </button>
-    <button id="upgradeClickValue">
-        Upgrade1
-    </button>
+    <table id='upgrades' class="upgradeTable">
+        <tr>
+            <td>
+                <button id="upgradeClickValue" class='upgrade'>
+                    Upgrade Click Value
+                </button>
+            </td>
+        </tr>
+    </table>
     <div id='clapper' class='clapper'>
         👏
     </div>
-    <p id='score'></p>
     <script src="main.js"></script>
 </body>
 
