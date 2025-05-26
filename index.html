@@ -35,19 +35,15 @@
         </main>
 
         <footer class="mt-8 pt-6 border-t border-gray-300">
-            <p class="text-sm text-gray-600">&copy; <span id="currentYear"></span> <span id="miraClickable" class="cursor-pointer text-green-600 hover:underline">Mira</span></p>
+            <p class="text-sm text-gray-600">&copy; <span id="currentYear"></span> <span id="miraClickable" class="cursor-pointer text-green-600 hover:underline">Mira</span>
         </footer>
     </div>
-
-    <script>
-        // Set current year in footer
+    <script>   
+      // Set current year in footer
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-
-        // Make 'Mira' clickable and run script.js
+        // Redirect when Mira is clicked
         document.getElementById('miraClickable').addEventListener('click', function() {
-            var script = document.createElement('script');
-            script.src = 'script.js';
-            document.body.appendChild(script);
+            window.location.href = 'https://miratried.xyz/squid/box.html';
         });
     </script>
 </body>

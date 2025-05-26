@@ -4,4 +4,3 @@ document.addEventListener('DOMContentLoaded', function() {
     window.location.href = 'squid/box.html';
   });
 });
-
