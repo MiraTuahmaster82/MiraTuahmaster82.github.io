@@ -1,52 +1,23 @@
-body {
-  font-family: 'Poppins', sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  background-color: rgb(255, 255, 255);
-  background-image: linear-gradient(60deg, #000000 50%, transparent 50%);
-  background-size: 2px 2px;
-  background-attachment: fixed;
-  
+/* Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
 
-}
-p {
-  font-size: 200%
-}
-h2 {
-  font-size: 300%;
-  color: #333;
-  text-align: center;
-  margin-top: 20px;
-}
+        /* Checkered background */
+        .checkered-bg {
+            background-image:
+                linear-gradient(45deg, #4ade80 25%, transparent 25%),
+                linear-gradient(-45deg, #4ade80 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, #4ade80 75%),
+                linear-gradient(-45deg, transparent 75%, #4ade80 75%);
+            background-size: 40px 40px; /* Size of the squares */
+            background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+            background-color: #ffffff; /* White background for the 'transparent' parts */
+        }
 
-.titlebar {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  text-align: center;
-  font-size: 20px;
-  font-weight: bold;
-}
-.slideshow-container {
-  position: absolute;
-  top: 50px;
-  right: 0;
-  max-width: 200px;
-  margin: 10px;
-  overflow: hidden;
-}
-
-.slide {
-  display: none;
-}
-
-.fade {
-  animation: fadeEffect 1.5s;
-}
-
-@keyframes fadeEffect {
-  from {opacity: 0.4;}
-  to {opacity: 1;}
-}
-
+        /* Ensure content area has some padding and a contrasting background for readability */
+        .content-area {
+            background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
+            backdrop-filter: blur(5px); /* Optional: adds a blur effect to the background */
+            -webkit-backdrop-filter: blur(5px); /* For Safari */
+        }

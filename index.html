@@ -3,63 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mira's Sigma Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="style.css">
 
-    <script src="script.js" defer></script>
-    <title>Mira's Webpage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div class="titlebar">Mira's Webpage</div>
-    <h2>About Me</h2>
-    <p>Hello. Mira's the name and tinkering is my game. I am a 17 year-old high school student.</p>
-    <p>I am a furry who likes to mess around with Windows.</p>
-    <p>In my free time, I enjoy gaming and sleeping a lot.</p>
-    <p>i have a wonderful girlfriend named Daffodil and she is Puppy. she is the best that that has ever happened to me </p>
-    <p>My favorite color is green and I love the smell of gasoline.</p>
+<body class="checkered-bg text-black min-h-screen flex flex-col items-center justify-center p-4 sm:p-6 md:p-8">
+
+    <div class="content-area shadow-xl rounded-xl p-6 sm:p-8 md:p-10 max-w-2xl w-full text-center">
+        <header class="mb-6">
+            <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900">Welcome!</h1>
+        </header>
+
+        <main class="text-left space-y-4">
+            <p class="text-base sm:text-lg text-gray-800">
+                Yo, I'm  Mira and this is my super cool sigma webpage
+            </p>
+            <p class="text-base sm:text-lg text-gray-800">
+                I'm 17, and currently on summer break, soon to be a senior in high school. I DESPISE coding and programming but i made this page using copilot and gemini because im too lazy right now to code this myself.
+            </p>
+            <section class="mt-6">
+                <h2 class="text-xl sm:text-2xl font-semibold text-gray-900 mb-3">Likes</h2>
+                <ul class="list-disc list-inside text-gray-800 space-y-1">
+                    <li>My Girlfriend</li>
+                    <li>Video Games</li>
+                    <li>Youtube</li>
+                    <li>Music</li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="mt-8 pt-6 border-t border-gray-300">
+            <p class="text-sm text-gray-600">&copy; <span id="currentYear"></span> <span id="miraClickable" class="cursor-pointer text-green-600 hover:underline">Mira</span></p>
+        </footer>
+    </div>
+
+    <script>
+        // Set current year in footer
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        // Make 'Mira' clickable and run script.js
+        document.getElementById('miraClickable').addEventListener('click', function() {
+            var script = document.createElement('script');
+            script.src = 'script.js';
+            document.body.appendChild(script);
+        });
+    </script>
 </body>
-<footer>
-    <button id="test" style="margin-top: 20px; padding: 10px 20px; background-color: #005e03; color: white; border: none; border-radius: 5px; cursor: pointer;">
-    Made with Love by Mira
-    </button>
-</footer>
-</html>                                                 
-
-
-
-
-
-
-
-
-<div class="slideshow-container">
-    <div class="slide fade">
-        <img src="img/Mira1.png" alt="Image 1" style="width: 200px; height:auto;">
-    </div>
-    <div class="slide fade">
-        <img src="img/Mira2.png" alt="Image 2" style="width: 200px; height:auto;">
-    </div>
-    <div class="slide fade">
-        <img src="img/Mira3.png" alt="Image 3" style="width: 200px; height:auto;">
-    </div>
-    <div class="slide fade">
-        <img src="img/Mira4.png" alt="Image 4" style="width: 200px; height:auto;">
-    </div>
-    <div class="slide fade">
-        <img src="img/Mira_Daff.png" alt="Image 5" style="width: 200px; height:auto;">
-    </div>
-</div>
-<script>
-let slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    let slides = document.getElementsByClassName("slide");
-    for (let i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}
-    slides[slideIndex - 1].style.display = "block";
-    setTimeout(showSlides, 3000); // Change image every 3 seconds
-}
-</script>
+</html>
