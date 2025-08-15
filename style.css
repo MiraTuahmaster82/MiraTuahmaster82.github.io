@@ -1,23 +1,23 @@
-/* Inter font family */
+
         body {
             font-family: 'Inter', sans-serif;
         }
 
-        /* Checkered background */
+
         .checkered-bg {
             background-image:
                 linear-gradient(45deg, #4ade80 25%, transparent 25%),
                 linear-gradient(-45deg, #4ade80 25%, transparent 25%),
                 linear-gradient(45deg, transparent 75%, #4ade80 75%),
                 linear-gradient(-45deg, transparent 75%, #4ade80 75%);
-            background-size: 40px 40px; /* Size of the squares */
+            background-size: 40px 40px;
             background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
-            background-color: #ffffff; /* White background for the 'transparent' parts */
+            background-color: #ffffff;
         }
 
-        /* Ensure content area has some padding and a contrasting background for readability */
+
         .content-area {
-            background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white */
-            backdrop-filter: blur(5px); /* Optional: adds a blur effect to the background */
-            -webkit-backdrop-filter: blur(5px); /* For Safari */
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
         }
